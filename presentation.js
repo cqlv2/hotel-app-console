@@ -93,7 +93,7 @@ function search(){
 //afficher la Liste des Chambre
 function afficherListeChambre(data){
 
-  console.log("\n###   Liste des chambres   ###\n");
+  console.log("\n###    Liste des chambres    ###\n");
 
   if(data.length>0){
     data.forEach((chambre, i) => {
