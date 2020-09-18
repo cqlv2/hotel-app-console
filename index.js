@@ -1,8 +1,4 @@
-var readline=require('readline');
-var presentation=require("./presentation.js")
-
-
-
-
+const readline=require('readline');
+const presentation=require("./presentation.js")
 console.log('**  Administration Hotel **\n');
 presentation.start();
