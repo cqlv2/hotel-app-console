@@ -23,13 +23,12 @@ exports.start = start;
 // Menu client liste
 function menuClientList(page, nbClient){
   var elmsMenu=[];
-  if (nbClient>=10)elmsMenu.push({libelleMenu: "page suivante" , fonction : function(){findAll(page+1)}});
-  if (page>0)elmsMenu.push({libelleMenu: "page precedente" , fonction : function(){findAll(page-1)}});
+  if (nbClient>=10)elmsMenu.push({libelleMenu: "page suivante" , fonction : ()=>{findAll(page+1)}});
+  if (page>0)elmsMenu.push({libelleMenu: "page precedente" , fonction : ()=>{findAll(page-1)}});
   elmsMenu.push({libelleMenu: "retour" , fonction:start});
   elmsMenu.forEach((elm, i) => {console.log((i+1)+" - "+elm.libelleMenu)});
   rl.question("Faite votre choix : ", function(saisie){checkMenu(saisie, elmsMenu)});
 }
-exports.menuClientList = menuClientList;
 
 // lire tout
 function findAll(page=0){
